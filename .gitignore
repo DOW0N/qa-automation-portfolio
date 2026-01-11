@@ -1,0 +1,28 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Newman reports
+newman-report.html
+
+# OS / Editor
+.vscode/
+.DS_Store
+
+# Windows / OneDrive noise
+AppData/
+Application Data/
+Cookies/
+Documents/
+Downloads/
+Favorites/
+Local Settings/
+NTUSER.*
+Recent/
+SendTo/
+Templates/
+Videos/
+Music/
+
+# Environment
+.env

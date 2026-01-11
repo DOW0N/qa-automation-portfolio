@@ -1,0 +1,30 @@
+name: API Automation with Newman
+
+on:
+  push:
+    branches: [ "master", "main" ]
+  pull_request:
+    branches: [ "master", "main" ]
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd api-test
+          npm install
+
+      - name: Run Newman API Tests
+        run: |
+          cd api-test
+          npx newman run "QA API Automation.postman_collection.json"

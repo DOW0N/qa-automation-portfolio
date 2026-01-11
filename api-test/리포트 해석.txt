@@ -1,0 +1,111 @@
+(1) 전체 요약 화면 (Overview)
+
+Total Requests
+
+Assertions
+
+Failures = 0
+
+Average Response Time
+
+👉 자동화 안정성 + 품질 지표
+
+(2) Login – Success 상세
+
+Status Code
+
+Response Time
+
+Token 검증 통과
+
+👉 인증 플로우 이해 증거
+
+(3) Login – Fail 상세
+
+401 Unauthorized
+
+Error message assertion
+
+Response time 체크
+
+👉 실패 케이스 설계 능력
+
+(4) Get User Cart – No Auth
+
+Status: 200 OK
+
+Assertion 문구:
+
+Unauthorized access is allowed (security risk)
+
+👉 이게 포폴 킬포인트 ⭐
+
+3️⃣ 해석 페이지용 문구 (PPT / README 그대로 복붙)
+
+아래는 그대로 써도 되는 문장들이야.
+
+📌 Newman HTML Report 해석
+
+Newman HTML 리포트는 API 자동화 테스트 실행 결과를 시각적으로 확인하기 위해 사용하였습니다.
+단순 성공/실패 여부가 아니라, 응답 시간, 테스트 커버리지, 실패 원인을 한 눈에 파악할 수 있어
+릴리즈 전 품질 판단 자료로 활용 가능합니다.
+
+📌 주요 테스트 결과 요약
+
+총 4개 API 시나리오 자동 실행
+
+총 10개 Assertion 검증
+
+전체 테스트 Pass
+
+평균 응답 시간 약 1초 이내
+
+📌 실패 케이스 테스트 해석
+
+잘못된 로그인 요청 시 서버가 401 상태 코드와 오류 메시지를 정상적으로 반환하는지 검증하였다.
+이를 통해 서버의 예외 처리 로직이 정상 동작함을 확인하였다.
+
+📌 보안 관점 테스트 해석 (중요)
+
+인증 토큰 없이 사용자 장바구니 API 접근이 가능한 동작을 확인하였다.
+기능 테스트 관점에서는 현재 API 스펙에 따라 테스트를 통과 처리하였으나,
+QA 관점에서는 보안 리스크로 판단하여 리포트에 명시하였다.
+
+
+결과 해석 (포폴에 그대로 써도 되는 버전)
+1️⃣ Login - Success
+
+정상 로그인 시 200 또는 201 허용
+
+토큰 존재 여부 검증
+
+👉 인증 성공 케이스의 핵심 책임을 명확히 테스트
+
+2️⃣ Get User Cart (Auth)
+
+인증된 요청에 대해서만 정상 응답(200)
+
+응답 타입이 배열인지
+
+각 cart가 필수 필드를 가지는지 검증
+
+👉 단순 상태 코드가 아니라 응답 구조 검증까지 포함
+
+3️⃣ Login - Fail (실패 케이스)
+
+잘못된 자격 증명 시 400 / 401 처리 확인
+
+에러 메시지 존재 여부 검증
+
+응답 시간 1초 이내 확인
+
+👉 실패 시나리오 + 성능 기준까지 포함한 QA 관점 테스트
+
+4️⃣ Get User Cart - No Auth
+
+❗ 토큰 없이도 200 응답 발생
+
+이를 테스트 실패로 처리하지 않고
+
+“Unauthorized access is allowed (security risk)”
+로 명시
