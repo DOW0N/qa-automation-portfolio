@@ -1,10 +1,10 @@
-name: API Automation with Newman
+name: Newman API Tests
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "master", "main" ]
+    branches: [ "master" ]
 
 jobs:
   api-test:
@@ -17,14 +17,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '18'
 
-      - name: Install dependencies
-        run: |
-          cd api-test
-          npm install
+      - name: Install Newman
+        run: npm install -g newman
 
       - name: Run Newman API Tests
         run: |
           cd api-test
-          npx newman run "QA API Automation.postman_collection.json"
+          newman run collection.json -e environment.json --reporters cli
