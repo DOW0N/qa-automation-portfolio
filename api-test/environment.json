@@ -1,0 +1,22 @@
+{
+	"id": "411e5c36-1618-4c57-9493-4f52450f2128",
+	"name": "QA API Env",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"color": null,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-01-14T15:05:52.491Z",
+	"_postman_exported_using": "Postman/11.79.5"
+}
