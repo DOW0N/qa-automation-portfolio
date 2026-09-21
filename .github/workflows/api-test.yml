@@ -2,9 +2,9 @@ name: API Automation with Newman
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   newman-api-test:
@@ -29,4 +29,12 @@ jobs:
           cd api-test
           npx newman run "QA API Automation.postman_collection.json" \
             -e environment.json \
-            --reporters cli
+            -r cli,htmlextra
+
+      - name: Upload Newman HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newman-html-report
+          path: api-test/newman/*.html
+          if-no-files-found: warn
