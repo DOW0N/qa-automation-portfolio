@@ -1,8 +1,8 @@
-\# QA Automation Portfolio
+﻿# QA Automation Portfolio
 
 
 
-\## 1. 프로젝트 소개
+## 1. 프로젝트 소개
 
 
 
@@ -14,41 +14,41 @@ API 테스트 자동화와 웹 UI 테스트 자동화를 통해 주요 기능의
 
 
 
-\## 2. 사용 기술
+## 2. 사용 기술
 
 
 
-\* Postman
+* Postman
 
-\* Newman
+* Newman
 
-\* Playwright
+* Playwright
 
-\* JavaScript
+* JavaScript
 
-\* GitHub Actions
+* GitHub Actions
 
-\* Git / GitHub
-
-
-
-\## 3. API 테스트 자동화
+* Git / GitHub
 
 
 
-\### 테스트 도구
+## 3. API 테스트 자동화
 
 
 
-\* Postman Collection
-
-\* Newman CLI
-
-\* GitHub Actions
+### 테스트 도구
 
 
 
-\### 테스트 시나리오
+* Postman Collection
+
+* Newman CLI
+
+* GitHub Actions
+
+
+
+### 테스트 시나리오
 
 
 
@@ -56,29 +56,29 @@ API 테스트 자동화와 웹 UI 테스트 자동화를 통해 주요 기능의
 
 
 
-&#x20;  \* 정상 로그인 요청 검증
+&#x20;  * 정상 로그인 요청 검증
 
 2\. Get User Cart (Auth)
 
 
 
-&#x20;  \* 인증 정보가 포함된 장바구니 조회 검증
+&#x20;  * 인증 정보가 포함된 장바구니 조회 검증
 
 3\. Login - Fail
 
 
 
-&#x20;  \* 로그인 실패 상황 검증
+&#x20;  * 로그인 실패 상황 검증
 
 4\. Get User Cart - No Auth
 
 
 
-&#x20;  \* 인증 정보가 없는 요청 검증
+&#x20;  * 인증 정보가 없는 요청 검증
 
 
 
-\### 실행 결과
+### 실행 결과
 
 
 
@@ -90,43 +90,43 @@ GitHub Actions 실행에서는 외부 API 환경에서 `403 Forbidden` 응답이
 
 
 
-\## 4. UI 테스트 자동화
+## 4. UI 테스트 자동화
 
 
 
-\### 테스트 도구
+### 테스트 도구
 
 
 
-\* Playwright
+* Playwright
 
-\* Chromium
+* Chromium
 
-\* Firefox
+* Firefox
 
-\* WebKit
-
-
-
-\### 주요 테스트
+* WebKit
 
 
 
-\* 로그인 후 Secure Area 진입 확인
-
-\* 페이지 타이틀 검증
-
-\* Logout 버튼 존재 및 동작 확인
-
-\* 브라우저별 페이지 로딩 성능 회귀 테스트
-
-\* 내부 리소스 요청 실패 여부 확인
-
-\* UI 스냅샷 회귀 테스트
+### 주요 테스트
 
 
 
-\### 테스트 결과
+* 로그인 후 Secure Area 진입 확인
+
+* 페이지 타이틀 검증
+
+* Logout 버튼 존재 및 동작 확인
+
+* 브라우저별 페이지 로딩 성능 회귀 테스트
+
+* 내부 리소스 요청 실패 여부 확인
+
+* UI 스냅샷 회귀 테스트
+
+
+
+### 테스트 결과
 
 
 
@@ -146,11 +146,11 @@ GitHub Actions 실행에서는 외부 API 환경에서 `403 Forbidden` 응답이
 
 
 
-\## 5. 네트워크 요청 검증
+## 5. 네트워크 요청 검증
 
 
 
-\### 목적
+### 목적
 
 
 
@@ -158,15 +158,15 @@ GitHub Actions 실행에서는 외부 API 환경에서 `403 Forbidden` 응답이
 
 
 
-\### 검증 방식
+### 검증 방식
 
 
 
-\* Playwright의 `requestfailed` 이벤트 활용
+* Playwright의 `requestfailed` 이벤트 활용
 
-\* 테스트 대상 서비스의 호스트 기준으로 요청 범위 제한
+* 테스트 대상 서비스의 호스트 기준으로 요청 범위 제한
 
-\* 내부 리소스 요청 실패 발생 시 테스트 실패 처리
+* 내부 리소스 요청 실패 발생 시 테스트 실패 처리
 
 
 
@@ -178,11 +178,11 @@ GitHub Actions 실행에서는 외부 API 환경에서 `403 Forbidden` 응답이
 
 
 
-\## 6. UI 스냅샷 회귀 테스트
+## 6. UI 스냅샷 회귀 테스트
 
 
 
-\### 목적
+### 목적
 
 
 
@@ -190,15 +190,15 @@ GitHub Actions 실행에서는 외부 API 환경에서 `403 Forbidden` 응답이
 
 
 
-\### 설계
+### 설계
 
 
 
-\* 주요 화면의 기준 스냅샷 저장
+* 주요 화면의 기준 스냅샷 저장
 
-\* 이후 테스트 실행 결과와 기준 이미지 비교
+* 이후 테스트 실행 결과와 기준 이미지 비교
 
-\* UI 변경으로 인한 시각적 차이 확인
+* UI 변경으로 인한 시각적 차이 확인
 
 
 
@@ -206,7 +206,7 @@ GitHub Actions 실행에서는 외부 API 환경에서 `403 Forbidden` 응답이
 
 
 
-\## 7. 실패 테스트를 유지한 이유
+## 7. 실패 테스트를 유지한 이유
 
 
 
@@ -222,11 +222,11 @@ QA의 역할은 문제를 숨기는 것이 아니라 문제를 발견하고, 원
 
 
 
-\## 8. 실행 방법
+## 8. 실행 방법
 
 
 
-\### API 테스트
+### API 테스트
 
 
 
@@ -234,13 +234,13 @@ QA의 역할은 문제를 숨기는 것이 아니라 문제를 발견하고, 원
 
 cd api-test
 
-newman run "QA API Automation.postman\_collection.json" -e environment.json
+newman run "QA API Automation.postman_collection.json" -e environment.json
 
 ```
 
 
 
-\### UI 테스트
+### UI 테스트
 
 
 
@@ -256,7 +256,7 @@ npx playwright test
 
 
 
-\### Playwright 리포트 확인
+### Playwright 리포트 확인
 
 
 
@@ -268,7 +268,7 @@ npx playwright show-report
 
 
 
-\## 9. CI/CD
+## 9. CI/CD
 
 
 
@@ -280,27 +280,28 @@ CI 실행 결과에서 발생한 `403 Forbidden` 응답을 확인하고, 로컬 
 
 
 
-\## 10. 프로젝트에서 수행한 작업
+## 10. 프로젝트에서 수행한 작업
 
 
 
-\* API 테스트 시나리오 작성
+* API 테스트 시나리오 작성
 
-\* Newman을 활용한 CLI 테스트 실행
+* Newman을 활용한 CLI 테스트 실행
 
-\* Playwright 기반 UI 자동화 테스트 작성
+* Playwright 기반 UI 자동화 테스트 작성
 
-\* 브라우저별 회귀 테스트 구성
+* 브라우저별 회귀 테스트 구성
 
-\* UI 스냅샷 테스트 구성
+* UI 스냅샷 테스트 구성
 
-\* 네트워크 요청 실패 검증
+* 네트워크 요청 실패 검증
 
-\* 테스트 실패 원인 분석
+* 테스트 실패 원인 분석
 
-\* GitHub Actions 자동 실행 구성
+* GitHub Actions 자동 실행 구성
 
-\* 테스트 결과 및 알려진 이슈 정리
+* 테스트 결과 및 알려진 이슈 정리
+
 
 
 
